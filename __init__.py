@@ -112,7 +112,15 @@ class BindiffViewerDialog(QDialog):
 
 		menu = QMenu(self.match_view)
 		menu.addAction("Port symbols", action_port_symbols)
-		menu.exec_(self.match_view.mapToGlobal(pos))
+
+		mv = self.match_view.mapToGlobal(pos)
+
+		try:
+			import PySide6
+
+			menu.exec(mv)
+		except ImportError:
+			menu.exec_(mv)
 
 	def port_symbols(self, i):
 		if self.role == None:
