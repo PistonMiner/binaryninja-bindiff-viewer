@@ -4,9 +4,14 @@ import traceback
 import binaryninja as bn
 import binaryninjaui
 
-from PySide2.QtGui import QColor
-from PySide2.QtCore import Qt, QAbstractItemModel, QModelIndex
-from PySide2.QtWidgets import QApplication, QDialog, QVBoxLayout, QTreeView, QMenu
+try:
+    from PySide2.QtGui import QColor
+    from PySide2.QtCore import Qt, QAbstractItemModel, QModelIndex
+    from PySide2.QtWidgets import QApplication, QDialog, QVBoxLayout, QTreeView, QMenu
+except:
+	from PySide6.QtGui import QColor
+	from PySide6.QtCore import Qt, QAbstractItemModel, QModelIndex
+	from PySide6.QtWidgets import QApplication, QDialog, QVBoxLayout, QTreeView, QMenu
 
 import sqlite3
 from .binexport import binexport2_pb2

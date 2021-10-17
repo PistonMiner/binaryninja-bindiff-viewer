@@ -1,4 +1,4 @@
-# BD Viewer (v1.0.1)
+# BD Viewer (v1.0.2)
 Author: **Linus S. (aka PistonMiner)**
 
 _View BinDiff results and port symbols_
