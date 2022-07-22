@@ -11,9 +11,9 @@
 	},
 	"platforms": ["Darwin", "Linux", "Windows"],
 	"installinstructions" : {
-		"Darwin" : "```bash\npip install protobuf\n```",
-		"Linux" : "```bash\npip install protobuf\n```",
-		"Windows" : "```bash\npip install protobuf\n```"
+		"Darwin" : "```bash\npip install protobuf==3.20.1\n```",
+		"Linux" : "```bash\npip install protobuf==3.20.1\n```",
+		"Windows" : "```bash\npip install protobuf==3.20.1\n```"
 	},
 	"dependencies": {
 		"pip": ["protobuf"]
