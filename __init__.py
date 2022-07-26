@@ -14,7 +14,12 @@ except:
 	from PySide6.QtWidgets import QApplication, QDialog, QVBoxLayout, QTreeView, QMenu
 
 import sqlite3
-from .binexport import binexport2_pb2
+
+import google.protobuf
+if getattr(google.protobuf, "__version__", "")[:2] == "3.":
+	from .binexport import binexport2_pb2_v3 as binexport2_pb2
+else:
+	from .binexport import binexport2_pb2
 
 def match_get_metadata(db):
 	c = db.cursor()
